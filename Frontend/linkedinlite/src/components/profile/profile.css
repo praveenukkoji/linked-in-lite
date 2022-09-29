@@ -1,0 +1,53 @@
+.profile-root {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.profile-container {
+    padding: 20px;
+}
+
+.custom-card {
+    background: none;
+    border: none;
+    max-height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-card-body{
+    padding: 0;
+    width: 100%;
+}
+
+.profile-details {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.profile-skills-container {
+}
+
+.profile-skills {
+    margin: 2px;
+}
+
+.profile-btns {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-applied-jobs{
+    overflow-y: auto;
+}

@@ -1,0 +1,28 @@
+.home-root{
+    height: 100%;
+}
+
+.home-container{
+    display: flex;
+    
+    height: inherit;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.filter{
+    flex-grow: 4;
+    min-width: 20em;
+    padding: 10px;
+}
+
+.joblist{
+    flex-grow: 6;
+    padding: 10px;
+}
+
+.profile{
+    flex-grow: 1;
+    min-width: 20em;
+    padding: 10px;
+}

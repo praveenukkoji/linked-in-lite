@@ -1,0 +1,29 @@
+.job-root {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-subbody {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.card-enditem {
+    margin-left: auto;
+}
+
+.job-role {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.job-apply-btn {
+    text-align: center;
+}
+
+.job-skill {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
