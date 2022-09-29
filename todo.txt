@@ -1,0 +1,8 @@
+# TODO LIST
+
+1. React Routing.
+2. Auth Guard at UI side.
+3. Authentication at API side.
+4. Company CRUD Portal.
+5. Job CRUD Portal.
+
