@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "b750d6aa-f311-4519-bd00-325b8e7a1f02",
+		"name": "LinkedIn Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6898919"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/company/v1/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"company",
+								"v1",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "multiple companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/company/v1/multiple/?companyIds=1,3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"company",
+								"v1",
+								"multiple",
+								""
+							],
+							"query": [
+								{
+									"key": "companyIds",
+									"value": "1,3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/company/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"company",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyName\": \"demo\",\n\t\"location\": \"demo\",\n\t\"email\": \"demo@demo.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/company/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"company",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update company",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/company/v1/3/?companyName=test&location=test&email=test@test.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"company",
+								"v1",
+								"3",
+								""
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "test"
+								},
+								{
+									"key": "location",
+									"value": "test"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete company",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/company/v1/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"company",
+								"v1",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "job with company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/job/v1/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/job/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "multiple jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/job/v1/multiple/?jobIds=1,2,3,4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								"multiple",
+								""
+							],
+							"query": [
+								{
+									"key": "jobIds",
+									"value": "1,2,3,4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"jobRole\": \"demo\",\n\t\"jobDescription\": \"demo\",\n\t\"requiredSkills\": [\"demo\"],\n\t\"fromExperienceInYears\": 0,\n\t\"toExperienceInYears\": 0,\n\t\"fromCtcInLakhs\": 0,\n\t\"toCtcInLakhs\": 0,\n\t\"companyId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8002/job/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update job",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/job/v1/5/?jobRole=test&jobDescription=test&requiredSkills=test&fromExperienceInYears=1&toExperienceInYears=1&fromCtcInLakhs=1&toCtcInLakhs=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								"5",
+								""
+							],
+							"query": [
+								{
+									"key": "jobRole",
+									"value": "test"
+								},
+								{
+									"key": "jobDescription",
+									"value": "test"
+								},
+								{
+									"key": "requiredSkills",
+									"value": "test"
+								},
+								{
+									"key": "fromExperienceInYears",
+									"value": "1"
+								},
+								{
+									"key": "toExperienceInYears",
+									"value": "1"
+								},
+								{
+									"key": "fromCtcInLakhs",
+									"value": "1"
+								},
+								{
+									"key": "toCtcInLakhs",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/job/v1/5/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete jobs by company id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8002/job/v1/deleteJobsByCompanyId/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"job",
+								"v1",
+								"deleteJobsByCompanyId",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8003/user/v1/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"user",
+								"v1",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"demo\",\n\t\"lastName\": \"demo\",\n\t\"email\": \"demo@gmail.com\",\n\t\"appliedJobIds\": [1, 2],\n\t\"dob\": \"2000-09-20\",\n\t\"skills\": [\"C++\", \"Java\"],\n\t\"experienceYears\": 0,\n\t\"experienceMonths\": 0,\n\t\"currentCtcInLakhs\": 0,\n\t\"companyId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/user/v1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"user",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"praveen@gmail.com\",\n\t\"password\": \"qwe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/user/v1/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"user",
+								"v1",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8003/user/v1/1/?firstName=test&lastName=test&email=praveen@gmail.com&dob=1997-02-17&skills=Java&experienceYears=1&experienceMonths=1&currentCtcInLakhs=17&companyId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"user",
+								"v1",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "test"
+								},
+								{
+									"key": "lastName",
+									"value": "test"
+								},
+								{
+									"key": "email",
+									"value": "praveen@gmail.com"
+								},
+								{
+									"key": "dob",
+									"value": "1997-02-17"
+								},
+								{
+									"key": "skills",
+									"value": "Java"
+								},
+								{
+									"key": "experienceYears",
+									"value": "1"
+								},
+								{
+									"key": "experienceMonths",
+									"value": "1"
+								},
+								{
+									"key": "currentCtcInLakhs",
+									"value": "17"
+								},
+								{
+									"key": "companyId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8003/user/v1/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"user",
+								"v1",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apply job",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/user/v1/applyJob/1/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"user",
+								"v1",
+								"applyJob",
+								"1",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
